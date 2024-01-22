@@ -1,11 +1,14 @@
 package br.com.fiap.soat.techChallenge.builders;
 
+import br.com.fiap.soat.techChallenge.api.requests.ItemDoPedidoRequest;
+import br.com.fiap.soat.techChallenge.api.requests.PedidoRequest;
 import br.com.fiap.soat.techChallenge.entities.ItemDoPedido;
 import br.com.fiap.soat.techChallenge.entities.Pedido;
 import br.com.fiap.soat.techChallenge.entities.Produto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 public class PedidoBuilder {
@@ -32,5 +35,15 @@ public class PedidoBuilder {
                 2,
                 BigDecimal.valueOf(produto.getPreco())
         );
+    }
+
+    public static PedidoRequest buildRequest() {
+        var pedidoRequest = new PedidoRequest();
+        pedidoRequest.setClienteId(UUID.randomUUID());
+        var itemDoPedido = new ItemDoPedidoRequest();
+        itemDoPedido.setProdutoId(UUID.randomUUID());
+        itemDoPedido.setQuantidade(1);
+        pedidoRequest.setItens(List.of(itemDoPedido));
+        return pedidoRequest;
     }
 }
