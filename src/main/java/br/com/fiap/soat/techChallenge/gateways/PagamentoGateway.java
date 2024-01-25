@@ -9,16 +9,16 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Component
 public class PagamentoGateway implements PagamentoGatewayPort {
 
-    @Autowired
-    private WebClient webClient;
+//    @Autowired
+//    private WebClient webClient;
 
     @Override
     public void iniciarPagamento(Pedido pedido) {
-        webClient.post()
-                .uri("/pagamentos")
-                .bodyValue(pedido)
-                .retrieve()
-                .bodyToMono(Pedido.class)
-                .block();
+//        webClient.post()
+//                .uri("/pagamentos")
+//                .bodyValue(pedido)
+//                .retrieve()
+//                .bodyToMono(Pedido.class)
+//                .block();
     }
 }
