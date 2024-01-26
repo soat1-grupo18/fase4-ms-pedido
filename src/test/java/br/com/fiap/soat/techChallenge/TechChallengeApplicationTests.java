@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class RestApiApplicationIT {
+class TechChallengeApplicationTests {
 
     @LocalServerPort
     private int port;
