@@ -16,6 +16,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SERVER_PORT=8080
       - MS_PAGAMENTO_URL=http://localhost:8083
       - MS_PRODUCAO_URL=http://localhost:8084
 
