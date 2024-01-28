@@ -22,4 +22,28 @@ public class ItemDoPedidoEmProducaoRequest {
         itemDoPedidoEmProducaoRequest.precoUnitario = itemDoPedido.getPrecoUnitario();
         return itemDoPedidoEmProducaoRequest;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public BigDecimal getPrecoUnitario() {
+        return precoUnitario;
+    }
 }

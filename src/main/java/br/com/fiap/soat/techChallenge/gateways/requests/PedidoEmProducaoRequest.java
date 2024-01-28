@@ -22,4 +22,20 @@ public class PedidoEmProducaoRequest {
 
         return pedidoEmProducaoRequest;
     }
+
+    public UUID getPedidoId() {
+        return pedidoId;
+    }
+
+    public UUID getClienteId() {
+        return clienteId;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public List<ItemDoPedidoEmProducaoRequest> getItens() {
+        return itens;
+    }
 }

@@ -21,7 +21,6 @@ public class ProducaoGateway implements ProducaoGatewayPort {
     }
     @Override
     public ResponseEntity<ProducaoResponse> criarPedidoEmProducao(Pedido pedido) {
-
         var pedidoEmProducaoRequest = PedidoEmProducaoRequest.fromDomain(pedido);
 
         return producaoWebClient.post()
